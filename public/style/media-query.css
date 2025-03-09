@@ -1,0 +1,138 @@
+/* Media Query for Mobile Devices */
+@media only screen and (max-width: 768px) {
+    /* General Styles */
+    body {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Header Adjustments */
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+        position: relative;
+    }
+
+    #logo {
+        position: static;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    #logo h2 {
+        position: static;
+        margin-left: 10px;
+    }
+
+    .search-container {
+        display: none; /* Hide search bar on mobile */
+    }
+
+    #btn {
+        position: static;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    #btn a {
+        font-size: 14px;
+    }
+
+    /* Left and Right Body Adjustments */
+    .left-body, .right-body {
+        display: none; /* Hide left and right body on mobile */
+    }
+
+    /* Middle Body Adjustments */
+    .middle-body {
+        width: 400px;
+        margin: 0;
+        padding: 10px;
+        position: absolute;
+        overflow-y: auto;
+        height: 510px;
+        top: 104px;
+        left: 25px;
+    }
+
+    .box1 {
+        width: 100%;
+        height: auto;
+    }
+
+    .box-body img {
+        width: 100%;
+        height: auto;
+    }
+
+    .box-footer {
+        padding: 10px;
+    }
+
+    .box-option {
+        justify-content: space-between;
+    }
+
+    .book {
+        position: static;
+    }
+
+    .span {
+        position: static;
+        margin-top: 10px;
+        justify-content: space-around;
+    }
+
+    .span a {
+        font-size: 12px;
+    }
+
+    .btn {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    /* Nav Bar Adjustments */
+    .nav-bar {
+        width: 100%;
+        position: fixed;
+        left: -44px;
+        bottom: 0;
+        border: none;
+        background-color: #fff;
+        border-top: 1px solid #e0e0e0;
+    }
+
+    .nav-opt {
+        justify-content: space-around;
+        gap: 10px;
+    }
+
+    .nav-opt i {
+        font-size: 1.2rem;
+    }
+
+    .plus {
+        font-size: 1.5rem;
+    }
+}
+
+/* Media Query for Tablets and Smaller Desktops */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Adjustments for tablets and smaller desktops */
+    .middle-body {
+        width: 60%;
+        margin-left: 20%;
+    }
+
+    .left-body, .right-body {
+        width: 15%;
+    }
+
+    .search-container {
+        left: 200px;
+    }
+}
