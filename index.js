@@ -52,68 +52,68 @@ let posts = [
     }
 ];
 
-app.get("/posts" , (req , res) => {
+app.get("/" , (req , res) => {
     res.render("index.ejs" , {posts});
 });
 
-app.get("/posts/help" , (req , res) => {
+app.get("/help" , (req , res) => {
     res.render("help.ejs");
 });
 
-app.get("/posts/about" , (req , res) => {
+app.get("/about" , (req , res) => {
     res.render("about.ejs");
 });
 
-app.get("/posts/friends" , (req , res) => {
+app.get("/friends" , (req , res) => {
     res.render("friends.ejs");
 });
 
-app.get("/posts/setting" , (req , res) => {
+app.get("/setting" , (req , res) => {
     res.render("setting.ejs");
 });
 
-app.get("/posts/profile" , (req , res) => {
+app.get("/profile" , (req , res) => {
     res.render("profile.ejs");
 });
 
-app.get("/posts/notification" , (req , res) => {
+app.get("/notification" , (req , res) => {
     res.render("notification.ejs");
 });
 
-app.get("/posts/new" , (req , res) => {
+app.get("/new" , (req , res) => {
     res.render("add.ejs");
 });
 
-app.post("/posts/new" , (req , res) => {
+app.post("/new" , (req , res) => {
     let {username , caption , image} = req.body;
     let id = uuidv4();
     posts.push({id ,username , caption , image});
-    res.redirect("/posts");
+    res.redirect("/");
 });
 
-app.delete("/posts/:id" , (req , res) => {
+app.delete("/:id" , (req , res) => {
     let {id} = req.params;
     posts = posts.filter((p) => id !== p.id);
-    res.redirect("/posts");
+    res.redirect("/");
 })
 
-app.patch("/posts/:id" , (req , res) => {
+app.patch("/:id" , (req , res) => {
     let {id} = req.params;
     let post = posts.find((p) => id === p.id);
     let newCaption = req.body.caption;
     let newImg = req.body.image;
     post.caption = newCaption;
     post.image = newImg;
-    res.redirect("/posts");
+    res.redirect("/");
 });
 
-app.get("/posts/:id/edit" , (req , res) => {
+app.get("/:id/edit" , (req , res) => {
     let {id} = req.params;
     let post = posts.find((p) => id === p.id);
     res.render("edit.ejs" , {post});
 });;
 
-app.get("/posts/:id" , (req , res) => {
+app.get("/:id" , (req , res) => {
     let {id} = req.params;
     let post = posts.find((p) => id === p.id);
     res.render("view.ejs" , {post}); 

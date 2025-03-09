@@ -171,7 +171,7 @@
     <h2>Edit Post</h2>
     <p id="p1">Post ID: <%= post.id %></p>
     <p id="p2">Username: <%= post.username %></p>
-    <form method="post" action="/posts/<%= post.id %>?_method=PATCH">
+    <form method="post" action="/<%= post.id %>?_method=PATCH">
         <textarea name="caption" id="caption" rows="12" cols="40" placeholder="Edit your caption..."><%= post.caption %></textarea>
         <br><br>
         <label for="img" class="custom-file-upload">Upload Image</label>

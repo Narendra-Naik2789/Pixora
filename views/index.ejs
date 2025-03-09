@@ -393,20 +393,20 @@
             <input type="text" placeholder="Search" class="search">
         </span>
         <span id="btn">
-            <a href="/posts"><i class="fa-solid fa-house"></i> Home</a>
-            <a href="http://localhost:3000/posts/new"><i class="fa-solid fa-pen-to-square"></i> Add post</a>
-            <a href="/posts/about"><i class="fa-solid fa-circle-info"></i> About</a>
-            <a href="/posts/help"><i class="fa-solid fa-circle-question"></i> Help</a>
+            <a href="/"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="/new"><i class="fa-solid fa-pen-to-square"></i> Add post</a>
+            <a href="/about"><i class="fa-solid fa-circle-info"></i> About</a>
+            <a href="/help"><i class="fa-solid fa-circle-question"></i> Help</a>
         </span>
     </div>
 
     <div class="left-body">
         <h3>Quick Links</h3>
         <ul>
-            <li><a href="/posts/profile"><i class="fa-solid fa-user"></i> Profile</a></li>
-            <li><a href="/posts/notification"><i class="fa-solid fa-bell"></i> Notifications</a></li>
-            <li><a href="/posts/setting"><i class="fa-solid fa-gear"></i> Settings</a></li>
-            <li><a href="/posts/friends"><i class="fa-solid fa-users"></i> Friends</a></li>
+            <li><a href="/profile"><i class="fa-solid fa-user"></i> Profile</a></li>
+            <li><a href="/notification"><i class="fa-solid fa-bell"></i> Notifications</a></li>
+            <li><a href="/setting"><i class="fa-solid fa-gear"></i> Settings</a></li>
+            <li><a href="/friends"><i class="fa-solid fa-users"></i> Friends</a></li>
         </ul>
     </div>
 
@@ -452,9 +452,9 @@
             </div>
         </div>
         <span class="span">
-            <a href="http://localhost:3000/posts/<%= post.id %>/edit">Edit Post</a>
-            <a href="http://localhost:3000/posts/<%= post.id %>">View</a>
-            <form method="post" action="http://localhost:3000/posts/<%= post.id %>?_method=DELETE">
+            <a href="/<%= post.id %>/edit">Edit Post</a>
+            <a href="/<%= post.id %>">View</a>
+            <form method="post" action="/<%= post.id %>?_method=DELETE">
                 <button class="btn">Delete</button>
             </form>
         </span>
@@ -473,11 +473,11 @@
 
     <div class="nav-bar">
         <div class="nav-opt">
-            <a href="/posts"><i class="fa-solid fa-house"></i></a>
+            <a href="/"><i class="fa-solid fa-house"></i></a>
             <i class="fa-solid fa-magnifying-glass"></i>
-            <a href="/posts/new"><i class="fa-sharp fa-solid fa-square-plus plus" style="font-size: 2rem;"></i></a>
+            <a href="/new"><i class="fa-sharp fa-solid fa-square-plus plus" style="font-size: 2rem;"></i></a>
             <i class="fas fa-film"></i>
-            <a href="/posts/profile"><i class="fa-solid fa-user"></i></a>
+            <a href="/profile"><i class="fa-solid fa-user"></i></a>
         </div>
     </div>
 </body>
