@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings Page</title>
+  <link rel="stylesheet" href="/setting.css">
+</head>
+<body>
+  <div class="settings-container">
+    <h1>Settings</h1>
+
+    <!-- Account Settings -->
+    <div class="settings-section">
+      <h2>Account</h2>
+      <div class="settings-item">
+        <label for="username">Username</label>
+        <input type="text" id="username" value="Naik_123" readonly>
+        <button class="edit-btn">Edit</button>
+      </div>
+      <div class="settings-item">
+        <label for="email">Email</label>
+        <input type="email" id="email" value="naik123@example.com" readonly>
+        <button class="edit-btn">Edit</button>
+      </div>
+      <div class="settings-item">
+        <label for="password">Password</label>
+        <input type="password" id="password" value="********" readonly>
+        <button class="edit-btn">Edit</button>
+      </div>
+    </div>
+
+    <!-- Privacy Settings -->
+    <div class="settings-section">
+      <h2>Privacy</h2>
+      <div class="settings-item">
+        <label>Private Account</label>
+        <label class="toggle-switch">
+          <input type="checkbox">
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="settings-item">
+        <label>Blocked Users</label>
+        <button class="view-btn">View List</button>
+      </div>
+    </div>
+
+    <!-- Notification Settings -->
+    <div class="settings-section">
+      <h2>Notifications</h2>
+      <div class="settings-item">
+        <label>Email Notifications</label>
+        <label class="toggle-switch">
+          <input type="checkbox" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="settings-item">
+        <label>Push Notifications</label>
+        <label class="toggle-switch">
+          <input type="checkbox" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Logout Button -->
+    <div class="settings-section">
+      <button class="logout-btn">Log Out</button>
+    </div>
+  </div>
+
+  <script src="/setting.js"></script>
+</body>
+</html>

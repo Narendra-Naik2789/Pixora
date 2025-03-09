@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post View</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/view.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fafafa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .box1 {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .box-header {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .profile-pic {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 10px;
+            border: 2px solid #e0e0e0;
+        }
+
+        .profile-pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .info {
+            flex: 1;
+        }
+
+        .username {
+            font-weight: bold;
+            color: #262626;
+        }
+
+        .music {
+            font-size: 12px;
+            color: #8e8e8e;
+        }
+
+        .threeDot {
+            font-size: 18px;
+            color: #262626;
+            cursor: pointer;
+        }
+
+        .box-body {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .view-img {
+            width: 100%;
+            /* height: auto; */
+            object-fit: cover;
+        }
+
+        .box-footer {
+            padding: 10px;
+        }
+
+        .box-option {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .box-option i {
+            cursor: pointer;
+            color: #262626;
+            transition: color 0.3s ease;
+        }
+
+        .box-option i:hover {
+            color: #007bff;
+        }
+
+        .book {
+            position: relative;
+            left: 280px;
+        }
+
+        .like-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .small-dp {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 8px;
+        }
+
+        .post-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .liked-by {
+            font-size: 14px;
+            color: #262626;
+        }
+
+        .liked-by span {
+            font-weight: bold;
+        }
+
+        .tags {
+            font-size: 14px;
+            color: #262626;
+        }
+
+        .tags1 {
+            font-weight: bold;
+        }
+
+        .tags2 {
+            color: #8e8e8e;
+            cursor: pointer;
+        }
+
+        .tag3 {
+            display: block;
+            color: #8e8e8e;
+            margin: 5px 0;
+            cursor: pointer;
+        }
+
+        .tag4 {
+            display: block;
+            margin: 5px 0;
+        }
+
+        .tag4 a {
+            font-weight: bold;
+            color: #262626;
+            text-decoration: none;
+        }
+
+        .tag4 i {
+            color: red;
+        }
+
+        .id {
+            font-size: 12px;
+            color: #8e8e8e;
+            margin: 5px 0;
+        }
+
+        .tag5 {
+            font-size: 12px;
+            color: #8e8e8e;
+        }
+
+        .box-body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .view-img {
+            width: 95%;
+            border-radius: 15px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 480px) {
+            .box1 {
+                border-radius: 0;
+                border: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box-header">
+            <div class="profile-pic">
+                <img src="<%=post.image %>" alt="profile picture">
+            </div>
+            <div class="info">
+                <span class="username"><%= post.username %></span>
+                <span class="music">
+                   <span> <i class="fa-solid fa-music"></i>  Night Changes . One Direction</span>
+                </span>
+            </div>
+            <div class="threeDot">
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+        </div>
+        <div class="box-body body3">
+            <img src="<%= post.image %>" alt="post img" class="ps-img view-img">
+        </div>
+        <div class="box-footer">
+            <div class="box-option">
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-comment"></i>
+                <i class="fa-regular fa-paper-plane"></i>
+                <i class="fa-regular fa-bookmark bk-i book"></i>
+            </div>
+            <div class="like-info">
+                <div class="small-dp">
+                    <img src="<%=post.image%>" alt="post-img" class="post-img">
+                </div>
+                <div class="liked-by">Liked by <span>LGD_NAIK</span> and <span>110k others</span></div>
+            </div>
+            <div class="tags">
+                <p><span class="tags1">naik_2789</span> <%= post.caption %></i><span class="tags2">  ...more</span></p>
+                <span class="tag3">View all 20k comments </span>
+                <span class="tag4"><a>magneto_9356</a> God level Player <i class="fa-solid fa-fire" style="color: red;"></i></span>
+                <div class="id"> Id : <%= post.id %></div>
+                <span class="tag5">3 days ago</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

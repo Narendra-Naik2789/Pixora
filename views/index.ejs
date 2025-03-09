@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/delete.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fafafa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header {
+            width: 100%;
+            background: #fff;
+            padding: 10px 20px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            height: 40px;
+        }
+
+        #logo {
+            display: flex;
+            align-items: center;
+            padding-left: 15px;
+        }
+
+        #logo img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        #logo h2 {
+            font-size: 24px;
+            color: #262626;
+            padding-left: 20px;
+        }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            background: #f0f0f0;
+            padding: 8px 12px;
+            border-radius: 18px;
+            position: relative;
+            left: 520px;
+            height: 20px;
+        }
+
+        .search-icon {
+            color: #8e8e8e;
+            margin-right: 8px;
+        }
+
+        .search {
+            border: none;
+            background: transparent;
+            outline: none;
+            font-size: 14px;
+            width: 200px;
+        }
+
+        #btn {
+            display: flex;
+            gap: 20px;
+            padding-right: 15px;
+        }
+
+        #btn a {
+            text-decoration: none;
+            color: #262626;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        #btn a:hover {
+            color: #007bff;
+        }
+
+        .left-body, .right-body {
+            width: 20%;
+            padding: 20px;
+            position: fixed;
+            top: 70px;
+        }
+
+        .left-body {
+            left: 0;
+        }
+
+        .right-body {
+            right: 0;
+        }
+
+        .middle-body {
+            width: 35%;
+            margin-top: 20px;
+            margin-left: -60px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .box1 {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            height: 695px;
+        }
+
+        .box-header {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .profile-pic {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 10px;
+            border: 2px solid #e0e0e0;
+        }
+
+        .profile-pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .info {
+            flex: 1;
+        }
+
+        .username {
+            font-weight: bold;
+            color: #262626;
+        }
+
+        .music {
+            font-size: 12px;
+            color: #8e8e8e;
+        }
+
+        .threeDot {
+            font-size: 18px;
+            color: #262626;
+            cursor: pointer;
+        }
+
+        .box-body img {
+            width: 95%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .box-footer {
+            padding: 10px;
+        }
+
+        .box-option {
+            display: flex;
+            
+            align-items: center;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .book {
+            position: relative;
+            left: 280px;
+        }
+
+        .box-option i {
+            cursor: pointer;
+            color: #262626;
+            transition: color 0.3s ease;
+            margin-right: 25px;
+        }
+
+        .box-option i:hover {
+            color: #007bff;
+        }
+
+        .like-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .small-dp {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 8px;
+        }
+
+        .small-dp img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .liked-by {
+            font-size: 14px;
+            color: #262626;
+        }
+
+        .liked-by span {
+            font-weight: bold;
+        }
+
+        .tags {
+            font-size: 14px;
+            color: #262626;
+        }
+
+        .tags1 {
+            font-weight: bold;
+        }
+
+        .tags2 {
+            color: #8e8e8e;
+            cursor: pointer;
+        }
+
+        .tag3 {
+            display: block;
+            color: #8e8e8e;
+            margin: 5px 0;
+            cursor: pointer;
+            margin-left: 9px;
+        }
+
+        .tag4 {
+            display: block;
+            margin: 5px 0;
+            margin-left: 9px;
+        }
+
+        .tag4 a {
+            font-weight: bold;
+            color: #262626;
+            text-decoration: none;
+        }
+
+        .tag4 i {
+            color: red;
+        }
+
+        .tag5 {
+            font-size: 12px;
+            color: #8e8e8e;
+        }
+
+        .span {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            position: relative;
+            bottom: 62px;
+        }
+
+        .span a {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 14px;
+        }
+
+        .span a:hover {
+            text-decoration: underline;
+        }
+
+        .btn {
+            background: #ff4d4d;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #cc0000;
+        }
+
+        .nav-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #fff;
+            border-top: 1px solid #e0e0e0;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            height: 30px;
+        }
+
+        .nav-opt {
+            display: flex;
+            gap: 30px;
+            font-size: 24px;
+            padding-bottom: 5px;
+        }
+
+        .nav-opt i {
+            cursor: pointer;
+            color: #262626;
+        }
+
+        .nav-opt i:hover {
+            color: #007bff;
+        }
+
+        .plus {
+            color: #007bff;
+        }
+
+        /* Left and Right Body Content */
+        .left-body, .right-body {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .left-body h3, .right-body h3 {
+            font-size: 18px;
+            color: #262626;
+            margin-bottom: 15px;
+        }
+
+        .left-body ul, .right-body ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .left-body ul li, .right-body ul li {
+            margin-bottom: 10px;
+        }
+
+        .left-body ul li a, .right-body ul li a {
+            text-decoration: none;
+            color: #262626;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .left-body ul li a:hover, .right-body ul li a:hover {
+            color: #007bff;
+        }
+
+        .box-body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="header">
+        <span id="logo">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.EMRbmGaAcfuIa95--FQ_-QHaHa&pid=Api&P=0&h=180" alt="logo">
+            <h2>Pixora</h2>
+        </span>
+        <span class="search-container">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" placeholder="Search" class="search">
+        </span>
+        <span id="btn">
+            <a href="/posts"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="http://localhost:3000/posts/new"><i class="fa-solid fa-pen-to-square"></i> Add post</a>
+            <a href="/posts/about"><i class="fa-solid fa-circle-info"></i> About</a>
+            <a href="/posts/help"><i class="fa-solid fa-circle-question"></i> Help</a>
+        </span>
+    </div>
+
+    <div class="left-body">
+        <h3>Quick Links</h3>
+        <ul>
+            <li><a href="/posts/profile"><i class="fa-solid fa-user"></i> Profile</a></li>
+            <li><a href="/posts/notification"><i class="fa-solid fa-bell"></i> Notifications</a></li>
+            <li><a href="/posts/setting"><i class="fa-solid fa-gear"></i> Settings</a></li>
+            <li><a href="/posts/friends"><i class="fa-solid fa-users"></i> Friends</a></li>
+        </ul>
+    </div>
+
+    <div class="middle-body">
+        <% for(post of posts) { %>
+        <div class="box1">
+            <div class="box-header">
+                <div class="profile-pic">
+                    <img src="<%= post.image %>" alt="profile picture">
+                </div>
+                <div class="info">
+                    <span class="username"><%= post.username %></span>
+                    <span class="music">
+                       <span> <i class="fa-solid fa-music"></i>  Night Changes . One Direction</span>
+                    </span>
+                </div>
+                <div class="threeDot">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+            </div>
+            <div class="box-body">
+                <img src="<%= post.image %>" alt="post img" class="ps-img">
+            </div>
+            <div class="box-footer">
+                <div class="box-option">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-regular fa-comment"></i>
+                    <i class="fa-regular fa-paper-plane"></i>
+                    <i class="fa-regular fa-bookmark bk-i book"></i>
+                </div>
+                <div class="like-info">
+                    <div class="small-dp">
+                        <img src="<%= post.image %>" alt="post-img" class="post-img">
+                    </div>
+                    <div class="liked-by">Liked by <span>LGD_NAIK</span> and <span>110k others</span></div>
+                </div>
+                <div class="tags">
+                    <p><span class="tags1">naik_2789</span> <%= post.caption %></i><span class="tags2">  ...more</span></p>
+                    <span class="tag3">View all 20k comments </span>
+                    <span class="tag4"><a>magneto_9356</a> God level Player <i class="fa-solid fa-fire" style="color: red;"></i></span>
+                    <span class="tag5">3 days ago</span>
+                </div>
+            </div>
+        </div>
+        <span class="span">
+            <a href="http://localhost:3000/posts/<%= post.id %>/edit">Edit Post</a>
+            <a href="http://localhost:3000/posts/<%= post.id %>">View</a>
+            <form method="post" action="http://localhost:3000/posts/<%= post.id %>?_method=DELETE">
+                <button class="btn">Delete</button>
+            </form>
+        </span>
+        <% } %>
+    </div>
+
+    <div class="right-body">
+        <h3>Trending</h3>
+        <ul>
+            <li><a href="#"><i class="fa-solid fa-hashtag"></i> #Pixora</a></li>
+            <li><a href="#"><i class="fa-solid fa-hashtag"></i> #SocialMedia</a></li>
+            <li><a href="#"><i class="fa-solid fa-hashtag"></i> #OneDirection</a></li>
+            <li><a href="#"><i class="fa-solid fa-hashtag"></i> #NightChanges</a></li>
+        </ul>
+    </div>
+
+    <div class="nav-bar">
+        <div class="nav-opt">
+            <a href="/posts"><i class="fa-solid fa-house"></i></a>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <a href="/posts/new"><i class="fa-sharp fa-solid fa-square-plus plus" style="font-size: 2rem;"></i></a>
+            <i class="fas fa-film"></i>
+            <a href="/posts/profile"><i class="fa-solid fa-user"></i></a>
+        </div>
+    </div>
+</body>
+</html>
