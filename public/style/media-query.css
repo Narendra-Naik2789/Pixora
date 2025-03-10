@@ -12,6 +12,7 @@
         height: auto;
         padding: 10px;
         position: relative;
+        left: 38px;
     }
 
     #logo {
@@ -22,7 +23,8 @@
 
     #logo h2 {
         position: static;
-        margin-left: 10px;
+        margin-left: -23px;
+        margin-right: 55px;
     }
 
     .search-container {
@@ -55,7 +57,8 @@
         overflow-y: auto;
         height: 510px;
         top: 104px;
-        left: 25px;
+        left: 6px;
+        height: 700px;
     }
 
     .box1 {
@@ -63,21 +66,25 @@
         height: auto;
     }
 
+    .box-body {
+        height: 300px;
+    }
+
     .box-body img {
         width: 100%;
-        height: auto;
+        height: 300px;
+        margin-right: 9px;
+        border-radius: 15px;
     }
 
     .box-footer {
         padding: 10px;
-    }
-
-    .box-option {
-        justify-content: space-between;
+        height: 163px;
     }
 
     .book {
-        position: static;
+        position: relative;
+        left: 140px;
     }
 
     .span {
@@ -99,7 +106,7 @@
     .nav-bar {
         width: 100%;
         position: fixed;
-        left: -44px;
+        left: -3px;
         bottom: 0;
         border: none;
         background-color: #fff;
@@ -108,7 +115,7 @@
 
     .nav-opt {
         justify-content: space-around;
-        gap: 10px;
+        gap: 50px;
     }
 
     .nav-opt i {

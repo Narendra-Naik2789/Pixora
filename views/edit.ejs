@@ -1,26 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Post</title>
-</head>
-<body>
-    <h2>Edit Post</h2>
-    <p><%= post.id %></p>
-    <p><%= post.username %></p>
-    <form method="post" action="/posts/<%= post.id %>?_method=PATCH">
-        <textarea name="caption" id="caption" rows="12" cols="40"><%= post.caption %></textarea>
-        <br><br>
-        <input type="file" placeholder="add file" name="img" disabled>
-        <br><br>
-        <textarea name="image" id="image" rows="8" cols="20" class="file"><%= post.image %></textarea>
-        <br><br>
-        <button>Edit Post</button>
-    </form>
-</body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -166,6 +143,7 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="/mq-edit.css">
 </head>
 <body>
     <h2>Edit Post</h2>
