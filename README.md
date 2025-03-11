@@ -1,59 +1,75 @@
-# Pixora - Social Media App 🖼️
+Pixora - Social Media App 🎨
 
 Pixora is a simple yet powerful social media application built using modern web technologies. It allows users to create, view, edit, and delete posts with ease. Each post includes a username, caption, and an image URL. The application follows RESTful API principles and uses UUID for unique post identification.
 
-## 🛠️ Technologies Used
+🌐 Live Demo
 
-### Frontend:
-- **HTML** - For structuring the web pages.
-- **CSS** - For styling the application.
-- **JavaScript** - For dynamic client-side functionality.
+You can view this project live here.
 
-### Backend:
-- **Node.js** - JavaScript runtime for server-side logic.
-- **Express.js** - Web framework for building RESTful APIs.
+🛠️ Technologies Used
 
-### Templating Engine:
-- **EJS (Embedded JavaScript)** - For server-side rendering of dynamic content.
+Frontend:
 
-### Other Tools:
-- **UUID** - For generating unique IDs for posts.
-- **Method-Override** - To support PATCH and DELETE requests in forms.
+HTML - For structuring the web pages.
 
-## ✨ Features
+CSS - For styling the application.
 
-- **Create Posts:** Add new posts with a username, caption, and image URL.
-- **View Posts:** View all posts on the home page or individual posts in detail.
-- **Edit Posts:** Update the caption or image URL of an existing post.
-- **Delete Posts:** Remove posts from the feed.
-- **RESTful API:** Follows REST principles for CRUD operations.
+JavaScript - For dynamic client-side functionality.
 
-## 🚀 Setup Instructions
+Backend:
 
-### Prerequisites
-- Node.js and npm installed on your machine.
+Node.js - JavaScript runtime for server-side logic.
 
-### Steps to Run the Project
+Express.js - Web framework for building RESTful APIs.
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Narendra-Naik2789/Pixora.git
-   cd pixora
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Start the server:
-   ```bash
-   node app.js
-   ```
-4. Access the application:
-   Open your browser and go to `http://localhost:3000`.
+Templating Engine:
 
-## 📂 Folder Structure
+EJS (Embedded JavaScript) - For server-side rendering of dynamic content.
 
-```
+Other Tools:
+
+UUID - For generating unique IDs for posts.
+
+Method-Override - To support PATCH and DELETE requests in forms.
+
+✨ Features
+
+Create Posts: Add new posts with a username, caption, and image URL.
+
+View Posts: View all posts on the home page or individual posts in detail.
+
+Edit Posts: Update the caption or image URL of an existing post.
+
+Delete Posts: Remove posts from the feed.
+
+RESTful API: Follows REST principles for CRUD operations.
+
+🚀 Setup Instructions
+
+Prerequisites
+
+Node.js and npm installed on your machine.
+
+Steps to Run the Project
+
+Clone the repository:
+
+git clone https://github.com/Narendra-Naik2789/Pixora.git
+cd pixora
+
+Install dependencies:
+
+npm install
+
+Start the server:
+
+node app.js
+
+Access the application:
+Open your browser and go to http://localhost:3000.
+
+👤 Folder Structure
+
 pixora/
 ├── public/
 │   ├── assets/       # Static assets (images, etc.)
@@ -70,92 +86,135 @@ pixora/
 ├── app.js            # Main application file
 ├── package.json      # Project dependencies
 └── README.md         # Project documentation
-```
 
-## 🌐 API Endpoints
+🌐 API Endpoints
 
-| HTTP Method | Endpoint     | Description                         |
-|------------|-------------|-------------------------------------|
-| GET        | `/`         | Render the home page with all posts. |
-| GET        | `/new`      | Render the form to add a new post. |
-| POST       | `/new`      | Create a new post. |
-| GET        | `/:id`      | View a single post. |
-| GET        | `/:id/edit` | Render the form to edit a post. |
-| PATCH      | `/:id`      | Update a post. |
-| DELETE     | `/:id`      | Delete a post. |
+HTTP Method
 
-## 💻 Commands
+Endpoint
 
-### Start the Server
-```bash
+Description
+
+GET
+
+/
+
+Render the home page with all posts.
+
+GET
+
+/new
+
+Render the form to add a new post.
+
+POST
+
+/new
+
+Create a new post.
+
+GET
+
+/:id
+
+View a single post.
+
+GET
+
+/:id/edit
+
+Render the form to edit a post.
+
+PATCH
+
+/:id
+
+Update a post.
+
+DELETE
+
+/:id
+
+Delete a post.
+
+💻 Commands
+
+Start the Server
+
 node app.js
-```
 
-### Install Dependencies
-```bash
+Install Dependencies
+
 npm install
-```
 
-### Debugging
-To debug the application, you can use `console.log()` statements or a debugging tool like Node Inspector.
+Debugging
 
-## 📝 Example Requests
+To debug the application, you can use console.log() statements or a debugging tool like Node Inspector.
 
-### Create a New Post
-**URL:** `/new`
+📝 Example Requests
 
-**Method:** `POST`
+Create a New Post
 
-**Body:**
-```json
+URL: /new
+
+Method: POST
+
+Body:
+
 {
   "username": "traveler_tom",
   "caption": "Exploring the mountains today! 🏔️",
   "image": "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0"
 }
-```
 
-### Update a Post
-**URL:** `/:id/edit`
+Update a Post
 
-**Method:** `PATCH`
+URL: /:id/edit
 
-**Body:**
-```json
+Method: PATCH
+
+Body:
+
 {
   "caption": "Updated caption!",
   "image": "https://new-image-url.com"
 }
-```
 
-### Delete a Post
-**URL:** `/:id`
+Delete a Post
 
-**Method:** `DELETE`
+URL: /:id
 
-## 📸 Screenshots
+Method: DELETE
 
-- Home Page
-- Add Post
-- Edit Post
+📸 Screenshots
 
-## 🤝 Contributing
+Home Page
+
+Add Post
+
+Edit Post
+
+🤝 Contributing
 
 Contributions are welcome! If you'd like to contribute, please follow these steps:
 
-1. Fork the repository.
-2. Create a new branch for your feature or bugfix.
-3. Submit a pull request with a detailed description of your changes.
+Fork the repository.
 
-## 📜 License
+Create a new branch for your feature or bugfix.
 
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+Submit a pull request with a detailed description of your changes.
 
-## 📧 Contact
+🐜 License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+💎 Contact
 
 For questions or feedback, feel free to reach out:
 
-- **Email:** naik929356@gmail.com
-- **GitHub Issues:** Open an [Issue](https://github.com/Narendra-Naik2789/Pixora.git)
+Email: naik929356@gmail.com
+
+GitHub Issues: Open an Issue
 
 Enjoy building and using Pixora! 🚀
+
