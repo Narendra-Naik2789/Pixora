@@ -15,6 +15,10 @@
         left: 38px;
     }
 
+    .box-header {
+        width: 100%;
+    }
+
     #logo {
         position: static;
         justify-content: center;
@@ -71,9 +75,8 @@
     }
 
     .box-body img {
-        width: 100%;
+        width: 96%;
         height: 300px;
-        margin-right: 9px;
         border-radius: 15px;
     }
 
@@ -91,6 +94,7 @@
         position: static;
         margin-top: 10px;
         justify-content: space-around;
+        margin-bottom: 35px;
     }
 
     .span a {

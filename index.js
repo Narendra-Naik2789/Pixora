@@ -22,25 +22,25 @@ app.use(express.urlencoded({ extended: true }));  // For form data
 let posts = [
     {
         id: uuidv4(),
-        username: "john_doe",
+        username: "Narendra_Naik",
         caption: "Enjoying the sunset at the beach! 🌅",
         image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
     },
     {
         id: uuidv4(),
-        username: "artsy_amy",
+        username: "Sumit_Rathod",
         caption: "Just finished this amazing painting! 🎨",
         image: "https://images7.alphacoders.com/372/thumb-1920-372776.jpg"
     },
     {
         id: uuidv4(),
-        username: "traveler_tom",
+        username: "Tushar_Kadam",
         caption: "Exploring the mountains today! 🏔️",
         image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0"
     },
     {
         id: uuidv4(),
-        username: "foodie_fiona",
+        username: "Ankit_Patil",
         caption: "Delicious homemade pasta for dinner! 🍝",
         image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836"
     },
