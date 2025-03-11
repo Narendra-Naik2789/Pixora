@@ -2,6 +2,10 @@ Pixora - Social Media App 🎨
 
 Pixora is a simple yet powerful social media application built using modern web technologies. It allows users to create, view, edit, and delete posts with ease. Each post includes a username, caption, and an image URL. The application follows RESTful API principles and uses UUID for unique post identification.
 
+## 🌐 Live Demo
+
+You can view this project live [here](https://pixora-vvmu.onrender.com/).
+
 🌐 Live Demo
 
 You can view this project live here.
