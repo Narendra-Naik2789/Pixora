@@ -50,7 +50,7 @@ You can view this project live [here](https://pixora-vvmu.onrender.com/).
    ```
 3. Start the server:
    ```bash
-   node app.js
+   node index.js
    ```
 4. Access the application:
    Open your browser and go to `http://localhost:3000`.
